@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <div class="container"><br><br>
+
+   
+    
+        <div class="job-explain">
+          <div>
+            <br><br>
+            <h1 style="font-size:300%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make Knowledge Sharing</h1>
+            <h1 style="font-size:300%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; between us</h1>
+            <p style="font-size:200%;">&nbsp;The answer to your <strong>problems</strong>&nbsp;<span>&#10003;</span></p>
+            <style>
+              div #d {
+                display: flex;
+                justify-content: space-between;
+              }
+            </style>
+            <div id="d">
+              <p style="font-size:120%;">&nbsp;&nbsp;&nbsp;Welcome to the <strong style="color: rgb(25, 77, 199);">Questions & Answers</strong>
+                section<br><br> &nbsp;&nbsp;&nbsp;This is a community where we can share knowledge, support each other,
+                and find help on any topic related to our studies.<br><br>&nbsp;&nbsp;&nbsp;Join us and let's learn
+                and grow together !</p>
+              <img align="right" src="{% static 'img.png' %}" alt="" width="700" height="300">
+            </div>
+          </div><br><br><br><br>
+          <div>
+            <img align="left" src="{% static 'img1.png' %}" alt="" width="600" height="350">
+            <p style="font-size:200%;">All starts with asking <strong style="color: rgb(25, 77, 199);">Questions</strong></p>
+            <p style="font-size:120%;">&nbsp;&nbsp;&nbsp;Welcome to the <strong style="color: rgb(25, 77, 199);">Questions & Answers</strong>
+              section<br><br> &nbsp;&nbsp;&nbsp;This is a community where we can share knowledge, support each other,
+              and find help on any topic related to our studies.<br><br>&nbsp;&nbsp;&nbsp;Join us and let's learn
+              and grow together !</p>
+          </div><br><br><br><br><br><br><br><br>
+         
+
+        </div>
+        {% endblock %}

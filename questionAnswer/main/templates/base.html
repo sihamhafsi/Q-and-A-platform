@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Detail Page{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'fa4/css/font-awesome.min.css' %}" />
+    <script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-white">
+        <div class="container">
+          <div class="logo">
+            <a href="{% url 'home' %}"><img src="{% static 'Q_A.png' %}" width="60" height="50"></a>
+           </div>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li style="padding-right: 20px;">
+                        <a  href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li style="padding-right: 20px;">
+                        <a  href="{% url 'all-questions' %}">All Questions</a>
+                    </li>
+                    <li style="padding-right: 20px;">
+                        <a  href="/tags">Categories</a>
+                    </li>
+                    <li style="padding-right: 20px;">
+                        <a href="/ask-question">Ask Question</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                   
+                    <li style="padding-right: 20px;">
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li style="padding-right: 20px;">
+                        <a href="/accounts/login">Login</a>
+                    </li>
+                    
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
